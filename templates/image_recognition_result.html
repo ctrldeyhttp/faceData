@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition Result</title>
+</head>
+<body>
+    <h1>Face Recognition Result</h1>
+    <p>Recognized Name: {{ name }}</p>
+
+    {% if captured_image %}
+        <h2>Captured Image</h2>
+        <img src="data:image/jpeg;base64,{{ captured_image }}" alt="Captured Image" style="max-width: 300px;">
+    {% else %}
+        <p>No image captured.</p>
+    {% endif %}
+</body>
+</html>

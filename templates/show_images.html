@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Images</title>
+</head>
+<body>
+    <h1>Uploaded Images</h1>
+    <div>
+        {% for image in images %}
+            <div>
+                <h2>{{ image.name }}</h2>
+                <p>Uploaded on: {{ image.date_uploaded }}</p>
+                <img src="{{ image.image.url }}" alt="{{ image.name }}" width="300">
+            </div>
+        {% empty %}
+            <p>No images uploaded yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
